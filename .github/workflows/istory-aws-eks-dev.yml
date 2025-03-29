@@ -85,7 +85,7 @@ jobs:
           cp build/libs/*.jar xinfra/docker/
           ls xinfra/docker/
       - name: 7.Docker Image Build
-        run: docker build ./xinfra/docker -t ${{ secrets.DOCKER_USERNAME }}/istory:${{ env.DOCKER_TAG }} -f ./xinfra/docker/Dockerfile
+        run: docker build ./xinfra/docker -t ${{ secrets.DOCKER_USERNAME }}/istory:${{ env.DOCKER_TAG }} -f ./xinfra/docker/DockerFile
       - name: 8.Docker Login
         uses: docker/login-action@v3.0.0
         with:
